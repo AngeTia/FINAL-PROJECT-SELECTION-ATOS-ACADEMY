@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet Final || Ange Tia</title>
+        <link rel="stylesheet" href="style_principal.css">
+        <script src="https://kit.fontawesome.com/f6f419588c.js" crossorigin="anonymous"></script>
+    </head>
+    <body> 
+        <header>
+            <div class="logo">
+                <h1><span>.BROWSER</span>NEW</h1>
+            </div>
+            <!-- menu responsive -->
+            <div class="toggle-menu"></div>
+
+            <ul class="menu">
+                <li><a href="https://www.mozilla.org/fr/firefox/browsers/browser-history/#:~:text=L'informaticien%20britannique%20Tim%20Berners,fen%C3%AAtre%20sur%20Internet%20%C2%AB%20WorldWideWeb%20%C2%BB.">Histoire</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/%C3%89volution_de_l%27usage_des_navigateurs_web#:~:text=L'arriv%C3%A9e%20de%20Google%20Chrome,Firefox%20(4%2C6%25).">Evolution</a></li>
+                <li><a href="https://vpnoverview.com/fr/confidentialite/navigation-anonyme/meilleur-navigateur-internet-confidentialite/#:~:text=Voici%20quelques%20pr%C3%A9cautions%20%C3%A0%20prendre,HTTPS%20avec%20des%20certificats%20SSL.">Confidentialité</a></li>
+                <li><a href="https://www.laposte.fr/professionnel/conseils-pour-etre-en-securite-sur-internet">Sécurité sur Internet</a></li>
+                <li><a href="https://github.com/AngeTia/projet-final">Projet sur GitHub</a></li>
+
+            </ul>        
+        </header>
+        <section>
+            <div class="left">
+                <div class="search-box">
+                    <img src="./images/brave.png" alt="">
+                    <input type="text">
+                </div>
+                <hr>
+                <h1>Navigateur Brave pour plus de sécurité</h1>
+                <p>Le navigateur Brave restera gratuit et protégera votre vie privée quoi qu'il arrive. Contrairement aux publicités des géants du Web, les publicités Brave ne portent pas atteinte à votre vie privée. Vos données ne quittent jamais votre appareil.</p>
+                <ul class="icons">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+            <!--Div droite-->
+            <div class="right">
+                <img src="./images/disque.png" alt="">
+            </div>
+        </section>
+        <!-- javascript code -->
+        <script>
+            var menu = document.querySelector(".menu");
+            var toggle_menu = document.querySelector(".toggle-menu");
+            toggle_menu.onclick = function(){
+                toggle_menu.classList.toggle('active');
+                menu.classList.toggle('responsive');
+            }
+        </script>
+    </body>
+</html>
