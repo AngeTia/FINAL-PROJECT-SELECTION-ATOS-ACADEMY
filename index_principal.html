@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--L' charsetattribut spécifie le codage des caractères pour le document HTML.-->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Le titre de la page-->
         <title>Projet Final || Ange Tia</title>
         <link rel="stylesheet" href="style_principal.css">
+        <!--Contient des icônes qu'on peut importer directement avec la connexion-->
         <script src="https://kit.fontawesome.com/f6f419588c.js" crossorigin="anonymous"></script>
     </head>
     <body> 
+        <!--La tête de page-->
         <header>
+            <!--"div":  utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs class ou id -->
             <div class="logo">
                 <h1><span>.BROWSER</span>NEW</h1>
             </div>
@@ -21,11 +26,12 @@
                 <li><a href="https://fr.wikipedia.org/wiki/%C3%89volution_de_l%27usage_des_navigateurs_web#:~:text=L'arriv%C3%A9e%20de%20Google%20Chrome,Firefox%20(4%2C6%25).">Evolution</a></li>
                 <li><a href="https://vpnoverview.com/fr/confidentialite/navigation-anonyme/meilleur-navigateur-internet-confidentialite/#:~:text=Voici%20quelques%20pr%C3%A9cautions%20%C3%A0%20prendre,HTTPS%20avec%20des%20certificats%20SSL.">Confidentialité</a></li>
                 <li><a href="https://www.laposte.fr/professionnel/conseils-pour-etre-en-securite-sur-internet">Sécurité sur Internet</a></li>
-                <li><a href="https://github.com/AngeTia/projet-final">Projet sur GitHub</a></li>
-
+                <li><a href="https://github.com/AngeTia/Final-Project-Tia">Projet sur GitHub</a></li>
             </ul>        
         </header>
+        <!--Section générique regroupant un même sujet, une même fonctionnalité, de préférence avec un en-tête, ou bien section d'application web-->
         <section>
+            <!-- div gauche -->
             <div class="left">
                 <div class="search-box">
                     <img src="./images/brave.png" alt="">
@@ -45,14 +51,26 @@
                 <img src="./images/disque.png" alt="">
             </div>
         </section>
-        <!-- javascript code -->
-        <script>
+
+        <!-- javascript code depuis l'intérieur d'HTML--> 
+        <!-- <script>
+            // La méthode querySelector() de l'interface Document retourne le premier Element dans le document correspondant au sélecteur 
+            // - ou groupe de sélecteurs - spécifié(s), ou null si aucune correspondance n'est trouvée.
+
             var menu = document.querySelector(".menu");
+            // La méthode querySelector() de l'interface Document retourne le premier Element dans le document correspondant au sélecteur 
+            // ou groupe de sélecteurs - spécifié(s), ou null si aucune correspondance n'est trouvée.
             var toggle_menu = document.querySelector(".toggle-menu");
+            // La propriété onclick, rattachée à l'interface Notification, définit un gestionnaire d'évènement
+            // à déclencher lorsque la notification recçoit un évènement click (qui se produit lorsqu'un utilisateur clique sur la notification).
             toggle_menu.onclick = function(){
+                // si "active" est défini, le supprimer, sinon, l'ajouter
                 toggle_menu.classList.toggle('active');
+                // si "responsive" est défini, le supprimer, sinon, l'ajouter
                 menu.classList.toggle('responsive');
             }
-        </script>
+        </script> -->
+        <!-- javascript code depuis un autre fichier-->
+        <script src="./script.js"></script>
     </body>
 </html>

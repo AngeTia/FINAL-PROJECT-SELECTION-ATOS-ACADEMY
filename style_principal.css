@@ -1,11 +1,13 @@
+/*Importer un font dépuis google*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/*margin et padding à 0 pour éviter différent rendu sur les navigateurs*/
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; /*margin définit la taille des marges sur les quatre côtés de l'élément.*/
+    padding: 0; /*padding est une propriété raccourcie qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément*/
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: #191513;
+    background-color: #191513; /* La couleur de fond de la page web*/
     position: relative;    
 }
 
@@ -13,10 +15,10 @@ span {
     color: #eea16d;
 }
 header {
-    display: flex;
+    display: flex; /**/
     align-items: center;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 10%; /* vertical | horizontal */
     height: 80px;
 }
 header .logo {
@@ -27,28 +29,31 @@ header .menu {
     align-items: center;
 }
 header .menu li {
-    margin: 0 15px;
-    list-style: none;
+    margin: 0 15px; /* vertical | horizontal */
+    list-style: none; /* Permet d'afficher la Valeur avec un mot-clé uniquement */
 }
 header .menu li a {
     color: #999;
-    text-decoration: 0;
-    text-transform: uppercase;
-    font-size: 15px;
+    text-decoration: 0; /*Pour aucune décoration*/
+    text-transform: uppercase; /*text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément*/
+    font-size: 15px; /* font-size: Taille de la police*/
     position: relative;
-    transition: 0.5s;
+    transition: 0.5s; /*Applique une transition globale de 0.5séconde*/
 }
+
+/*:hover permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.*/
 header .menu li a:hover {
     color: #fff;
-    font-size: 18px;
+    font-size: 18px; /*font-size définit la taille de fonte utilisée pour le texte.*/
 }
+/* ::beforesélecteur insère quelque chose avant le contenu de chaque élément sélectionné. */
 header .menu li a::before {
     position: absolute;
-    bottom: -5px;
-    content: "";
-    width: 0%;
-    height: 5px;
-    border-radius: 6px;
+    bottom: -5px; /* bottom contribue à la définition de l'emplacement vertical des éléments positionnés*/
+    content: "";/*content remplace un élément avec une valeur générée*/
+    width: 0%; /*permet de définir la largeur de la boîte du contenu d'un élément.*/
+    height: 5px; /*permet de définir la hauteur de la boîte du contenu d'un élément.*/
+    border-radius: 6px; /*border-radius permet de définir des coins arrondis pour la bordure d'un élément.*/
     transition: 0.5s;
     background-color: #eea16d;
 }
@@ -59,7 +64,7 @@ header .menu li a:hover::before {
 section {
     height: calc(100vh - 80px);
     align-items: center;
-    padding: 0 10%;
+    padding: 0 10%; /* vertical | horizontal */
     display: flex;
 }
 .left {
@@ -82,8 +87,8 @@ section {
     color: #fff;
     width: calc(100% - 16px);
     padding-left: 5px;
-    border: 0;
-    outline: 0;
+    border: 0; /*Permet de ne pas définir de Bordure*/
+    outline: 0; /*Permet de ne pas définir de Contour*/
 }
 .left hr {
     width: 100px;
@@ -118,23 +123,23 @@ section {
     width: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Éléments groupés au centre */
     border-radius: 50px;
     margin-left: 25px;
-    cursor: pointer;
+    cursor: pointer; /*cursor définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.*/
     transition: 0.5s;
 }
 .icons li i:hover {
     background-color: #eea16d;
     color: #fff;
-    transform: scale(1.5);
+    transform: scale(1.5); /*La propriété transform modifie l'espace de coordonnées utilisé pour la mise en forme visuelle. Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.*/
     color: #fff;
 }
 .right {
     width: 55%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Éléments groupés au centre */
     height: 100%;
 }
 .right img {
@@ -142,6 +147,7 @@ section {
     width: 100%;
 }
 /* Responsive */
+/*La règle @ @media permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs requêtes média (media queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.*/
 @media (max-width:904px){
     header {
         padding: 0 5%;
@@ -151,7 +157,7 @@ section {
     }
     section {
         margin-top: 100px;
-        flex-direction: column;
+        flex-direction: column; /*flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).*/
 
     }
     section .left , section .right {
@@ -163,8 +169,8 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
-        z-index: 1;
+        cursor: pointer; /*cursor définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.*/
+        z-index: 1; /*Permet de couvrir le body et l'image*/
         position: relative;
     }
     .toggle-menu::before {
@@ -174,7 +180,7 @@ section {
         width: 25px;
         background-color: #fff;
         border-radius: 6px;
-        box-shadow: 0 10px 0 #fff;
+        box-shadow: 0 10px 0 #fff; /*box-shadow ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules*/
         transform: translateY(-10px);
         transition: 0.5s;
     }
@@ -189,7 +195,7 @@ section {
         width: 25px;
         background-color: #fff;
         border-radius: 6px;
-        transform: translateY(10px);
+        transform: translateY(10px); /*transform modifie l'espace de coordonnées utilisé pour la mise en forme visuelle.*/
         transition: 0.5s;
     }
     .toggle-menu.active::after{
